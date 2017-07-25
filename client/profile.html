@@ -10,16 +10,21 @@
                     <li class="active"><a href="{{pathFor 'main'}}">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Matthew, </a></li>
-                    <li><a href="{{pathFor 'login'}}">Log out</a></li>
+                    <li><a href="#">{{fullname}}, </a></li>
+                    <li><a href="{{pathFor 'logout'}}">Log out</a></li>
                 </ul>
             </div>
         </nav>
 
-        fdsafdsa
         <div class="container">
             <h3>{{fullname}}</h3>
             <p>{{organization}}</p>
+            <p>{{team}}</p>
+            <p>{{role}}</p>
+            <p>{{orgSelect1}}</p>
+            <p>{{orgSelect2}}</p>
+            <p>{{orgSelect3}}</p>
+            <p>{{roleSelect1}}</p>
         </div>
     </body>
     {{/with}}

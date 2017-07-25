@@ -1,3 +1,5 @@
+import { Session } from 'meteor/session'
+
 if (Meteor.isClient){
 	Template.login.events({
 		'submit form': function(event, template){
@@ -16,6 +18,8 @@ if (Meteor.isClient){
 				email: emailVar,
 				password: passwordVar
 			});
+			Session.set('userId', emailVar);
+			console.log(Session.get('userId'));
             Router.go('insertUser');
 		}
 	});

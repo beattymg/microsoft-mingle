@@ -19,11 +19,6 @@ Router.route('/login', {
 
 Router.route('/profile/:_id', {
     name: 'profile',
-    waitOn: function() {
-        return [
-            Meteor.subscribe('profiles', this.params._id)
-        ];
-    },
     data: function() { return Profiles.findOne(this.params._id); }
 });
 

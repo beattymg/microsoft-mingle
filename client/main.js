@@ -19,4 +19,10 @@ Template.main.events({
     // increment the counter when button is clicked
     instance.counter.set(instance.counter.get() + 1);
   },
+  'click .profile-link': function(){
+
+      Session.set('userId', 'matthew@gmail.com');
+      Router.go('profile', {_id: Session.get('userId')});
+  }
 });
+
