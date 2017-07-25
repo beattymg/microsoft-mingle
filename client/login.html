@@ -25,12 +25,12 @@
 		</style>
 	</head>
 
-	<body>
+	<body class="mingle-login-body">
 		{{#if currentUser}}
 			{{> dashboard}}
 		<p>You're Logged In!</p>
-		<!-- {{else}}
-			{{> register}} -->
+		{{else}}
+			{{> register}}
 		{{/if}}
 	</body> 
 
