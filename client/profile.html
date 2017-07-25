@@ -1,4 +1,5 @@
 <template name="profile">
+    {{#with profile}}
     <body>
         <nav id="navbar" style="background-color: lightgray">
             <div class="container-fluid">
@@ -14,9 +15,12 @@
                 </ul>
             </div>
         </nav>
+
+        fdsafdsa
         <div class="container">
-            <h3>profile info</h3>
-            <p>profile</p>
+            <h3>{{fullname}}</h3>
+            <p>{{organization}}</p>
         </div>
     </body>
+    {{/with}}
 </template>

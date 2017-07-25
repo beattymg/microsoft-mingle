@@ -1,17 +1,3 @@
-<head>
-	<h2> Login Page </h2>
-</head>
-
-<body>
-	{{#if currentUser}}
-		{{> dashboard}}
-	<p>You're Logged In!</p>
-	{{else}}
-		{{> register}}
-		{{> login}}
-	{{/if}}
-</body>
-
 <template name="register">
 <form>
 <input type = "text" id = "email">

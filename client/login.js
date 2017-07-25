@@ -16,6 +16,7 @@ if (Meteor.isClient){
 				email: emailVar,
 				password: passwordVar
 			});
+            Router.go('insertUser');
 		}
 	});
 	Template.dashboard.events({
