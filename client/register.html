@@ -1,8 +1,30 @@
 
-    <template name="register">
-    <form>
-    <input type = "text" id = "email" placeholder="E-mail">
-    <input type = "password" id = "password" placeholder="Password">
-    <input type = "submit" value = "Register">
-    </form>
-    </template>  
+	<template name = "register">
+		<div class="container">
+		    <div class="col-md-4 col-md-offset-4 mingle-title">
+		        <span>Registration</span>
+		    </div>
+		    <div class="row vertical-offset-100">
+		    	<div class="col-md-4 col-md-offset-4">
+		    		<div class="panel panel-default">
+					  	<div class="panel-heading">
+					    	<h3 class="panel-title">Enter email and new password</h3>
+					 	</div>
+					  	<div class="panel-body">
+					    	<form accept-charset="UTF-8" role="form">
+		                    <fieldset>
+					    	  	<div class="form-group">
+					    		    <input class="form-control" placeholder="E-mail" name="email" id="login-email" type="text">
+					    		</div>
+					    		<div class="form-group">
+					    			<input class="form-control" placeholder="Password" name="password" id="login-password" type="password">
+					    		</div>
+					    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Register">
+					    	</fieldset>
+					      	</form>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</template>

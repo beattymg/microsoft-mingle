@@ -2,35 +2,12 @@
 		<!--<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>-->
 		<!-- This is a very simple parallax effect achieved by simple CSS 3 multiple backgrounds, made by http://twitter.com/msurguy -->
 
-		<style>
-		body{
-		    /*background: url(https://microsoft.sharepoint.com/teams/BrandCentral/BundleImages/12622MSSurfacePro_Studio_Elaina_8761/PreviewImage.png);*/
-			/*background-color: #444;*/
-		    /*background-size: cover;*/
-		    
-		}
-
-		.mingle-title{
-		    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		    font-weight: lighter;
-		    color: black;
-		    font-size: 3em;
-		    vertical-align: center;
-		}
-
-		.vertical-offset-100{
-		    padding-top:100px;
-		}
-
-		</style>
 	</head>
 
-	<body>
+	<body class="mingle-login-body">
 		{{#if currentUser}}
 			{{> dashboard}}
 		<p>You're Logged In!</p>
-		<!-- {{else}}
-			{{> register}} -->
 		{{/if}}
 	</body> 
 
