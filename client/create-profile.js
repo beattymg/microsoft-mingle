@@ -15,7 +15,7 @@ Template.insertUser.events({
             roleSelect1: $('#roleSelect1').find(":selected").text(),
             roleSelect2: $('#roleSelect1').find(":selected").text(),
             roleSelect3: $('#roleSelect1').find(":selected").text(),
-            userId: Session.get('userId')
+            userId: Meteor.userId()
         };
 
 
@@ -24,9 +24,9 @@ Template.insertUser.events({
                     $(e.target).find('[name=organization]').val(),
                     $(e.target).find('[name=team]').val(),
                     $(e.target).find('[name=role]').val(),
-                    Session.get('userId'));
+                    Meteor.userId());
 
         Profiles.insert(profile);
-        Router.go('profile', {userId: Session.get('userId')});
+        Router.go('profile', {userId: Meteor.userId()});
     }
 });

@@ -4,8 +4,13 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './main.html';
 
 Template.main.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+    // counter starts at 0
+    this.counter = new ReactiveVar(0);
+
+    if (Meteor.user() === null || Meteor.userId() === null)
+    {
+        Router.go('login');
+    }
 });
 
 Template.main.helpers({
@@ -20,7 +25,7 @@ Template.main.events({
     instance.counter.set(instance.counter.get() + 1);
   },
   'click .profile-link': function(){
-      Router.go('profile', {_id: Session.get('userId')});
+      Router.go('profile', {userId: Meteor.userId()});
   }
 });
 
