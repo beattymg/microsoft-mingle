@@ -28,8 +28,11 @@ Router.route('/profile/:_id', {
 });
 
 
-Router.route('/createprofile', {
+Router.route('/create-profile', {
     template: 'insertUser'
 });
 
+Router.route('/register', {
+    template: 'register'
+});
 
