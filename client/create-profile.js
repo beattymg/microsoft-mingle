@@ -2,8 +2,6 @@ Template.insertUser.events({
     'submit form': function(e) {
         e.preventDefault();
 
-        Session.set('userId', "matthew@gmail.com");
-
         var profile = {
             fullname: $(e.target).find('[name=fullname]').val(),
             headshot: $(e.target).find('[name=headshot]').val(),
@@ -20,6 +18,7 @@ Template.insertUser.events({
             userId: Session.get('userId')
         };
 
+
         console.log($(e.target).find('[name=fullname]').val(),
                     $(e.target).find('[name=headshot]').val(),
                     $(e.target).find('[name=organization]').val(),
@@ -27,6 +26,7 @@ Template.insertUser.events({
                     $(e.target).find('[name=role]').val(),
                     Session.get('userId'));
 
-        Router.go('profile', {_id: Session.get('userId')});
+        Profiles.insert(profile);
+        Router.go('profile', {userId: Session.get('userId')});
     }
 });

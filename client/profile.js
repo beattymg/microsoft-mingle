@@ -1,8 +1,10 @@
-Template.profile.onCreated(function bodyOnCreated() {
-});
-
 Template.profile.helpers({
     profile: function() {
-        return Profiles.findOne();
+        Session.set('userId', "testing1@google.com");
+        console.log("session userid is " + Session.get('userId'));
+        var prof = Profiles.find({ 'userId': Session.get('userId') }).fetch();
+        console.log(prof);
+        return Profiles.find({ 'userId': Session.get('userId') }).fetch();
+        // return Profiles.findOne();
     }
 });

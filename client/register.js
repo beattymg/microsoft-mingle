@@ -10,7 +10,7 @@ if (Meteor.isClient){
 			});
             Session.set('userId', emailVar);
             console.log(Session.get('userId'));
-            Router.go('create-profile');
+            Router.go('createprofile');
 		}
 	});
 }
