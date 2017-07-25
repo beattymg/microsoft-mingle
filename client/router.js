@@ -1,5 +1,6 @@
 Router.route('/', {
-    template: 'main'
+    template: 'main',
+    name: 'main'
 });
 
 Router.route('/login', {
@@ -9,3 +10,6 @@ Router.route('/login', {
 Router.route('/profile', {
     template: 'profile'
 });
+
+Router.route('/createprofile', {name: 'insertUser'});
+

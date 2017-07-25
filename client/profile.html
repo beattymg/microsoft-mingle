@@ -1,3 +1,22 @@
 <template name="profile">
-    <h2>Here's your profile</h2>
+    <body>
+        <nav id="navbar" style="background-color: lightgray">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{pathFor 'main'}}">Microsoft Mingle</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="{{pathFor 'main'}}">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Matthew, </a></li>
+                    <li><a href="{{pathFor 'login'}}">Log out</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h3>profile info</h3>
+            <p>profile</p>
+        </div>
+    </body>
 </template>
