@@ -26,7 +26,9 @@ Template.insertUser.events({
                     $(e.target).find('[name=role]').val(),
                     Meteor.userId());
 
+        profile._id = Meteor.userId();
         Profiles.insert(profile);
+
         Router.go('profile', {userId: Meteor.userId()});
     }
 });
