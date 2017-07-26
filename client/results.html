@@ -61,12 +61,12 @@
                 <a class="navbar-brand" href="{{pathFor 'results'}}">Microsoft Mingle</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="profile-link"><a href="{{pathFor 'profile'}}">Profile </a></li>
+                <li class="profile-button"><a href="{{pathFor 'profile'}}">Profile </a></li>
                 <li><a href="{{pathFor 'login'}}">Log out</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <div class="row">
         <div class="col-md-6">
             {{>resultuser1}}
@@ -84,8 +84,6 @@
         </div>
     </div>
 </template>
-
-
 
 <template name="resultuser1">
     {{#with mingle}}
