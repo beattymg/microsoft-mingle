@@ -1,11 +1,15 @@
-// Template.updateProfile.onCreated(function () {
-//
-//     console.log(Meteor.userId());
-//     var profile = Profiles.findOne({ 'userId': Meteor.userId() });
-//     console.log(profile);
-//     $('#fullname').val(profile.fullname);
-// });
+Template.updateProfile.onCreated(function () {
+    $(document).ready(function() {
+        $('#orgSelect1').val("OPG");
+    });
+    console.log("test");
+});
 
+Template.updateProfile.rendered = function() {
+    $('#orgSelect1').val("OPG");
+};
+
+$('#orgSelect1').val("OPG");
 
 Template.updateProfile.helpers({
     profile: function() {
