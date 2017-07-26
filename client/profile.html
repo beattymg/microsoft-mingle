@@ -53,7 +53,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">{{fullname}}'s Profile</a></li>
-                    <li><a href="{{pathFor 'login'}}">Log out</a></li>
+                    <li>{{> dashboard}}</li>
 
                 </ul>
             </div>
@@ -79,7 +79,10 @@
         
     </div>
 </div>
-
     </body>
     {{/with}}
+</template>
+
+<template name="dashboard">
+    <p><a href="#" class="logout">Logout</a></p>
 </template>
