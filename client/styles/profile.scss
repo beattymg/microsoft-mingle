@@ -4,6 +4,28 @@ $tab-height: $header-height - $tab-top;
 $search-size: 39px;
 $search-top: ($header-height / 2) - ($search-size / 2);
 
+$diameter: 550px;
+$radius: $diameter*0.5;
+
+.image-cropper-profile {
+    width: $diameter;
+    height: $diameter;
+    position: relative;
+    border: 2px solid white;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+.my-picture-profile {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+
 .navbar {
   background-color: lightgray;
 }
