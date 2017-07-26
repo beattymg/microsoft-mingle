@@ -1,7 +1,7 @@
-$diameter: 200px;
+$diameter: 400px;
 $radius: ($diameter/2);
 
-.image-cropper-results {
+.image-cropper-create {
     width: $diameter;
     height: $diameter;
     position: relative;
@@ -12,23 +12,9 @@ $radius: ($diameter/2);
     overflow: hidden;
 }
 
-.my-picture-results {
+.my-picture-create {
     display: block;
     margin: 0 auto;
     height: 100%;
     width: auto;
-}
-
-.mingle-bio {
-    font-family: 'Segoe UI';
-    font-weight: lighter;
-}
-
-h2 {
-    font-family: 'Segoe UI';
-    font-weight: lighter;
-}
-h4 {
-    font-family: 'Segoe UI';
-    font-weight: lighter;
 }

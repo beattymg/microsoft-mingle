@@ -1,37 +1,51 @@
 <template name="insertUser">
-    <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="url">Name</label>
-            <div class="controls">
-                <input name="fullname" id="fullname" type="text" value="" placeholder="Your Name" class="form-control"/>
-            </div>
-            <label class="control-label" for="url">Headshot URL</label>
-            <div class="controls">
-                <input name="headshot" id="headshot" type="text" value="" placeholder="Headshot" class="form-control"/>
-            </div>
-            <label class="control-label" for="title">Organization</label>
-            <div class="controls">
-                <input name="organization" id="organization" type="text" value="" placeholder="Organization" class="form-control"/>
-            </div>
-            <label class="control-label" for="title">Team/Product</label>
-            <div class="controls">
-                <input name="team" id="team" type="text" value="" placeholder="Your Team" class="form-control"/>
-            </div>
-            <label class="control-label" for="title">Role</label>
-            <div class="controls">
-                <input name="role" id="role" type="text" value="" placeholder="Your Role" class="form-control"/>
-            </div>
-            <label class="control-label" for="title">Age (will not be shown)</label>
-            <div class="controls">
-                <input name="age" id="role" type="number" value="" placeholder="Your Age" class="form-control"/>
-            </div>
+    <div class="container">
+        <form class="main form page">
+            <div class="form-group">
+                <div class="row vertical-offset-2">
+                    <div class="col-md-6">
+                        <label class="control-label" for="url">Name</label>
+                        <div class="controls">
+                            <input name="fullname" id="fullname" type="text" value="" placeholder="Your Name" class="form-control" />
+                        </div>
+                        <label class="control-label" for="url">Headshot URL</label>
+                        <div class="controls">
+                            <input name="headshot" id="headshot" type="text" value="" 
+                            placeholder="Headshot" class="form-control" 
+                            onchange="loadPhoto(this)"
+                            onpaste="loadPhoto(this)"
+                            />
+                        </div>
+                        <label class="control-label" for="title">Organization</label>
+                        <div class="controls">
+                            <input name="organization" id="organization" type="text" value="" placeholder="Organization" class="form-control" />
+                        </div>
+                        <label class="control-label" for="title">Team/Product</label>
+                        <div class="controls">
+                            <input name="team" id="team" type="text" value="" placeholder="Your Team" class="form-control" />
+                        </div>
+                        <label class="control-label" for="title">Role</label>
+                        <div class="controls">
+                            <input name="role" id="role" type="text" value="" placeholder="Your Role" class="form-control" />
+                        </div>
+                        <label class="control-label" for="title">Age (will not be shown)</label>
+                        <div class="controls">
+                            <input name="age" id="role" type="number" value="" placeholder="Your Age" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-cropper-create">
+                            <img id="preloadimage" class="my-picture-create" src="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row vertical-offset-100">
 
-            <br/>
-            <br/>
-            Choose the three organizations you're most interested in learning about:
-            <div class="form-group">
-                <label for="orgSelect1">Organizations (1st choice)</label>
-                <select class="form-control" id="orgSelect1">
+                    <div class="col-md-6">
+                        Choose the three organizations you're most interested in learning about:
+                        <div class="form-group">
+                            <label for="orgSelect1">Organizations (1st choice)</label>
+                            <select class="form-control" id="orgSelect1">
                     <option>C&E</option>
                     <option>WDG</option>
                     <option>OPG</option>
@@ -39,10 +53,10 @@
                     <option>Business</option>
                     <option>Marketing</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="orgSelect2">Organizations (2nd choice)</label>
-                <select class="form-control" id="orgSelect2">
+                        </div>
+                        <div class="form-group">
+                            <label for="orgSelect2">Organizations (2nd choice)</label>
+                            <select class="form-control" id="orgSelect2">
                     <option>C&E</option>
                     <option>WDG</option>
                     <option>OPG</option>
@@ -50,10 +64,10 @@
                     <option>Business</option>
                     <option>Marketing</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="orgSelect3">Organizations (3rd choice)</label>
-                <select class="form-control" id="orgSelect3">
+                        </div>
+                        <div class="form-group">
+                            <label for="orgSelect3">Organizations (3rd choice)</label>
+                            <select class="form-control" id="orgSelect3">
                     <option>C&E</option>
                     <option>WDG</option>
                     <option>OPG</option>
@@ -61,14 +75,13 @@
                     <option>Business</option>
                     <option>Marketing</option>
                 </select>
-            </div>
-
-            <br/>
-            <br/>
-            Choose the three roles you're most interested in learning about:
-            <div class="form-group">
-                <label for="roleSelect1">Roles (1st choice)</label>
-                <select class="form-control" id="roleSelect1">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        Choose the three roles you're most interested in learning about:
+                        <div class="form-group">
+                            <label for="roleSelect1">Roles (1st choice)</label>
+                            <select class="form-control" id="roleSelect1">
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>
@@ -76,10 +89,10 @@
                     <option>Business</option>
                     <option>Recruiter</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="roleSelect2">Roles (2nd choice)</label>
-                <select class="form-control" id="roleSelect2">
+                        </div>
+                        <div class="form-group">
+                            <label for="roleSelect2">Roles (2nd choice)</label>
+                            <select class="form-control" id="roleSelect2">
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>
@@ -87,19 +100,30 @@
                     <option>Business</option>
                     <option>Recruiter</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="roleSelect3">Roles (3rd choice)</label>
-                <select class="form-control" id="roleSelect3">
+                        </div>
+                        <div class="form-group">
+                            <label for="roleSelect3">Roles (3rd choice)</label>
+                            <select class="form-control" id="roleSelect3">
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>
                     <option>Marketing</option>
                     <option>Business</option>
                     <option>Recruiter</option>
-                </select>
+                            </select>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <input type="submit" value="Submit" class="btn btn-primary"/>
-    </form>
+            <div class="row">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <script>
+        function loadPhoto(x) {
+            // console.log(x.value)
+            $('#preloadimage').attr('src', x.value);
+        }
+    </script>
 </template>
