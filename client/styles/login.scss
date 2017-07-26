@@ -1,7 +1,8 @@
-.mingle-login-body{
-    //background-image: url('/login-image.png');
-    //background-color: #444;
-    //background-size: cover;
+.login-container{
+    background-image: url('http://gotravelaz.com/wp-content/uploads/images/Zion_National_Park_33823.jpg');
+    width: auto;
+    height:100%;
+    background-size: cover;
 }
 
 .mingle-title{
@@ -14,4 +15,8 @@
 
 .vertical-offset-100{
     padding-top:100px;
+}
+
+html, body {
+    height: 100%;
 }
