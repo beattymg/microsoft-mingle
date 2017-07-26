@@ -1,0 +1,31 @@
+.image-cropper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 2px solid white;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.my-picture {
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.mingle-bio {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+}
+h4 {
+    font-family: 'Segoe UI';
+    font-weight: lighter;
+}
