@@ -25,7 +25,14 @@ Template.resultuser3.helpers({
 Template.resultuser4.helpers({
     mingle: function() {
     	var cursor = Profiles.find().fetch();
-        console.log(cursor.slice(0,4));
+        //console.log(cursor.slice(0,4));
         return cursor.slice(0,4)[3];
     }
+});
+
+Template.results.events({
+    'click .profile-button': function(){
+  	//console.log(Meteor.userId());
+    	Router.go('profile', {userId: Meteor.userId()});
+  }
 });
