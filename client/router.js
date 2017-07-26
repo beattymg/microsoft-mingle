@@ -22,3 +22,6 @@ Router.route('/register', {
     template: 'register'
 });
 
+Router.route('/updateprofile', {
+    template: 'updateProfile'
+});
