@@ -53,29 +53,42 @@
 </div> -->
 
 
-<!-- <template name="results">
-    {{#with profile}}
+ <template name="results">
+
+     <nav id="navbar" style="background-color: lightgray">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{pathFor 'results'}}">Microsoft Mingle</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="profile-link"><a href="{{pathFor 'profile'}}">Profile </a></li>
+                <li><a href="{{pathFor 'login'}}">Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <div class="row">
         <div class="col-md-6">
-            {{>resultuser}}
+            {{>resultuser1}}
         </div>
         <div class="col-md-6">
-            {{>resultuser}}
+            {{>resultuser2}}
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            {{>resultuser}}
+            {{>resultuser3}}
         </div>
         <div class="col-md-6">
-            {{>resultuser}}
+            {{>resultuser4}}
         </div>
     </div>
 </template>
 
 
 
-<template name="resultuser">
+<template name="resultuser1">
+    {{#with mingle}}
     <div class="image-cropper">
         <img class="my-picture" src="{{headshot}}">
     </div>
@@ -86,4 +99,50 @@
         {{orgSelect3}}
     </p>
     <span><a class="btn btn-secondary" href="#" role="button">Connect &raquo;</a></span>
-</template> -->
+    {{/with}}
+</template> 
+
+<template name="resultuser2">
+    {{#with mingle}}
+    <div class="image-cropper">
+        <img class="my-picture" src="{{headshot}}">
+    </div>
+    <h2>{{fullname}}</h2>
+    <h3>{{role}}</h3>
+    <h4>{{organization}} | <small>{{team}}</small></h4>
+    <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
+        {{orgSelect3}}
+    </p>
+    <span><a class="btn btn-secondary" href="#" role="button">Connect &raquo;</a></span>
+    {{/with}}
+</template>
+
+<template name="resultuser3">
+    {{#with mingle}}
+    <div class="image-cropper">
+        <img class="my-picture" src="{{headshot}}">
+    </div>
+    <h2>{{fullname}}</h2>
+    <h3>{{role}}</h3>
+    <h4>{{organization}} | <small>{{team}}</small></h4>
+    <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
+        {{orgSelect3}}
+    </p>
+    <span><a class="btn btn-secondary" href="#" role="button">Connect &raquo;</a></span>
+    {{/with}}
+</template> 
+
+<template name="resultuser4">
+    {{#with mingle}}
+    <div class="image-cropper">
+        <img class="my-picture" src="{{headshot}}">
+    </div>
+    <h2>{{fullname}}</h2>
+    <h3>{{role}}</h3>
+    <h4>{{organization}} | <small>{{team}}</small></h4>
+    <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
+        {{orgSelect3}}
+    </p>
+    <span><a class="btn btn-secondary" href="#" role="button">Connect &raquo;</a></span>
+    {{/with}}
+</template> 

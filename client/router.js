@@ -25,3 +25,8 @@ Router.route('/register', {
 Router.route('/updateprofile', {
     template: 'updateProfile'
 });
+
+Router.route('/results', {
+    template: 'results',
+    data: function() { return Profiles.find().fetch().slice(0,4); }
+});
