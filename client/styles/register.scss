@@ -1,11 +1,11 @@
-.page-container-login{
-    background-image: url('/mingle-landing-image.jpg');
+.page-container-register{
+    background-image: url('/mingle-register-image.png');
     width: auto;
     height:100%;
     background-size: cover;
 }
 
-.mingle-login-title{
+.mingle-title{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: lighter;
     color: white;
@@ -23,7 +23,7 @@ html, body, .container-fluid, .side-panel {
     padding: 0px;
 }
 
-.login-background{
+.register-background{
     background: #002050   ;
     opacity: .95;
     height: 100%;

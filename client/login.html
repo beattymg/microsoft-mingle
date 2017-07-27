@@ -1,14 +1,18 @@
 <template name="login">
-	<div class="login-container">
+	<div class="page-container-login">
 		<div class="container-fluid">
-			<div class="row vertical-offset-100">
-				<div class="col-md-4 col-md-offset-4 mingle-title">
-					<span>Microsoft Mingle</span>
-				</div>
-			</div>
-			<div class="row vertical-offset-100">
-				<div class="col-md-4 col-md-offset-4">
-					{{> loginbox}}
+			<div class="row side-panel">
+				<div class="col-md-4 col-md-offset-8 login-background">
+					<div class="row vertical-offset-100">
+						<div class="mingle-login-title">
+							Microsoft Mingle
+						</div>
+					</div>
+					<div class="row vertical-offset-100">
+						<div class="">
+							{{> loginbox}}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -29,8 +33,8 @@
 					<div class="form-group">
 						<input class="form-control" placeholder="Password" name="login-password" id="login-password" type="password">
 					</div>
-					<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-					<a href="{{pathFor 'register'}}"> Register New Account </a>
+					<input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+					<a href="{{pathFor 'register'}}"> Don't have a Mingle account yet? </a>
 				</fieldset>
 			</form>
 		</div>
