@@ -1,45 +1,3 @@
-
-<head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <style>
-        .image-cropper {
-            width: 400px;
-            height: 400px;
-            position: relative;
-            border: 2px solid white;
-            -webkit-border-radius: 200px;
-            -moz-border-radius: 200px;
-            border-radius: 200px;
-            overflow: hidden;
-        }
-        .my-picture {
-            display: block;
-            margin: 0 auto;
-            height: 100%;
-            width: auto;
-        }
-        .mingle-bio {
-            font-family: 'Segoe UI';
-            font-weight: lighter;
-        }
-        h2 {
-            font-family: 'Segoe UI';
-            font-weight: lighter;
-            font-size: 4em;
-        }
-        h4 {
-            font-family: 'Segoe UI';
-            font-weight: lighter;
-            font-size: 2em;
-        }
-    </style>
-</head>
-
 <template name="profile">
     {{#with profile}}
     <body>
@@ -61,13 +19,13 @@
 
         <div class="row mingle-bio">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="image-cropper">
-                    <img class="my-picture" src = "{{headshot}}">
+        <div class="row vertical-offset-100">
+            <div class="col-lg-8">
+                <div class="image-cropper-profile">
+                    <img class="my-picture-profile" src = "{{headshot}}">
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <h2>{{fullname}}</h2>
                 <h3>{{role}}</h3>
                 <h4>{{organization}} | <small>{{team}}</small></h4>

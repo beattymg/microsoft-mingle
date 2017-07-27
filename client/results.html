@@ -1,5 +1,4 @@
 <template name="results">
-
      <nav id="navbar" style="background-color: lightgray">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -11,29 +10,32 @@
             </ul>
         </div>
     </nav>
-
+<div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 profile-box" align="center" >
             {{>resultuser1}}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-5 profile-box" align="center">
             {{>resultuser2}}
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5 profile-box" align="center">
             {{>resultuser3}}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-5 profile-box" align="center">
             {{>resultuser4}}
         </div>
+    </div>
     </div>
 </template>
 
 <template name="resultuser1">
     {{#with mingle}}
-    <div class="image-cropper">
-        <img class="my-picture" src="{{headshot}}">
+    <div class="image-cropper-results">
+        <img class="my-picture-results" src="{{headshot}}">
     </div>
     <h2>{{fullname}}</h2>
     <h3>{{role}}</h3>
@@ -46,8 +48,8 @@
 
 <template name="resultuser2">
     {{#with mingle}}
-    <div class="image-cropper">
-        <img class="my-picture" src="{{headshot}}">
+    <div class="image-cropper-results">
+        <img class="my-picture-results" src="{{headshot}}">
     </div>
     <h2>{{fullname}}</h2>
     <h3>{{role}}</h3>
@@ -61,8 +63,8 @@
 
 <template name="resultuser3">
     {{#with mingle}}
-    <div class="image-cropper">
-        <img class="my-picture" src="{{headshot}}">
+    <div class="image-cropper-results">
+        <img class="my-picture-results" src="{{headshot}}">
     </div>
     <h2>{{fullname}}</h2>
     <h3>{{role}}</h3>
@@ -76,8 +78,8 @@
 
 <template name="resultuser4">
     {{#with mingle}}
-    <div class="image-cropper">
-        <img class="my-picture" src="{{headshot}}">
+    <div class="image-cropper-results">
+        <img class="my-picture-results" src="{{headshot}}">
     </div>
     <h2>{{fullname}}</h2>
     <h3>{{role}}</h3>
