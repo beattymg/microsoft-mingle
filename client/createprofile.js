@@ -5,9 +5,9 @@ Template.insertUser.events({
         var profile = {
             fullname: $(e.target).find('[name=fullname]').val(),
             headshot: $(e.target).find('[name=headshot]').val(),
-            organization: $(e.target).find('[name=organization]').val(),
+            organization: $('#organization').find(":selected").text(),
             team: $(e.target).find('[name=team]').val(),
-            role: $(e.target).find('[name=role]').val(),
+            role: $('#role').find(":selected").text(),
             age: $(e.target).find('[name=age]').val(),
             orgSelect1: $('#orgSelect1').find(":selected").text(),
             orgSelect2: $('#orgSelect2').find(":selected").text(),

@@ -10,18 +10,29 @@
             <div class="controls">
                 <input name="headshot" id="headshot" type="text" value="{{headshot}}" placeholder="Headshot" class="form-control"/>
             </div>
-            <label class="control-label" for="title">Organization</label>
-            <div class="controls">
-                <input name="organization" id="organization" type="text" value="{{organization}}" placeholder="Organization" class="form-control"/>
-            </div>
+            <label class="control-label" for="organization">Organization</label>
+            <select class="form-control" id="organization">
+                <option selected disabled>{{organization}}</option>
+                <option>C&E</option>
+                <option>WDG</option>
+                <option>OPG</option>
+                <option>AI&R</option>
+                <option>Business</option>
+                <option>Marketing</option>
+            </select>
             <label class="control-label" for="title">Team/Product</label>
             <div class="controls">
                 <input name="team" id="team" type="text" value="{{team}}" placeholder="Your Team" class="form-control"/>
             </div>
-            <label class="control-label" for="title">Role</label>
-            <div class="controls">
-                <input name="role" id="role" type="text" value="{{role}}" placeholder="Your Role" class="form-control"/>
-            </div>
+            <label class="control-label" for="role">Role</label>
+            <select class="form-control" id="role">
+                <option>Software Engineer</option>
+                <option>Program Manager</option>
+                <option>Engineering Manager</option>
+                <option>Marketing</option>
+                <option>Business</option>
+                <option>Recruiter</option>
+            </select>
             <label class="control-label" for="title">Age (will not be shown)</label>
             <div class="controls">
                 <input name="age" id="role" type="number" value="{{age}}" placeholder="Your Age" class="form-control"/>
@@ -33,9 +44,10 @@
             <div class="form-group">
                 <label for="orgSelect1">Organizations (1st choice)</label>
                 <select class="form-control" id="orgSelect1">
+                    <option selected disabled>{{orgSelect1}}</option>
                     <option>C&E</option>
                     <option>WDG</option>
-                    <option value="OPG">OPG</option>
+                    <option>OPG</option>
                     <option>AI&R</option>
                     <option>Business</option>
                     <option>Marketing</option>
@@ -44,6 +56,7 @@
             <div class="form-group">
                 <label for="orgSelect2">Organizations (2nd choice)</label>
                 <select class="form-control" id="orgSelect2">
+                    <option selected disabled>{{orgSelect2}}</option>
                     <option>C&E</option>
                     <option>WDG</option>
                     <option>OPG</option>
@@ -55,6 +68,7 @@
             <div class="form-group">
                 <label for="orgSelect3">Organizations (3rd choice)</label>
                 <select class="form-control" id="orgSelect3">
+                    <option selected disabled>{{orgSelect3}}</option>
                     <option>C&E</option>
                     <option>WDG</option>
                     <option>OPG</option>
@@ -70,6 +84,7 @@
             <div class="form-group">
                 <label for="roleSelect1">Roles (1st choice)</label>
                 <select class="form-control" id="roleSelect1">
+                    <option selected disabled>{{roleSelect1}}</option>
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>
@@ -81,6 +96,7 @@
             <div class="form-group">
                 <label for="roleSelect2">Roles (2nd choice)</label>
                 <select class="form-control" id="roleSelect2">
+                    <option selected disabled>{{roleSelect2}}</option>
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>
@@ -92,6 +108,7 @@
             <div class="form-group">
                 <label for="roleSelect3">Roles (3rd choice)</label>
                 <select class="form-control" id="roleSelect3">
+                    <option selected disabled>{{roleSelect3}}</option>
                     <option>Software Engineer</option>
                     <option>Program Manager</option>
                     <option>Engineering Manager</option>

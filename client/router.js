@@ -22,8 +22,9 @@ Router.route('/register', {
     template: 'register'
 });
 
-Router.route('/updateprofile', {
-    template: 'updateProfile'
+Router.route('/updateprofile/:userId', {
+    name: 'updateProfile',
+    data: function() { return Profiles.findOne(this.params.userId); }
 });
 
 Router.route('/results', {
