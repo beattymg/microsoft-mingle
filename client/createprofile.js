@@ -13,8 +13,8 @@ Template.insertUser.events({
             orgSelect2: $('#orgSelect2').find(":selected").text(),
             orgSelect3: $('#orgSelect3').find(":selected").text(),
             roleSelect1: $('#roleSelect1').find(":selected").text(),
-            roleSelect2: $('#roleSelect1').find(":selected").text(),
-            roleSelect3: $('#roleSelect1').find(":selected").text(),
+            roleSelect2: $('#roleSelect2').find(":selected").text(),
+            roleSelect3: $('#roleSelect3').find(":selected").text(),
             userId: Meteor.userId()
         };
 
