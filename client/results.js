@@ -2,7 +2,6 @@ Template.resultuser1.helpers({
     mingle: function() {
     	var current = Profiles.find({"userId": Meteor.userId()}).fetch()[0].orgSelect1;
     	var cursor = Profiles.find({"organization": current}).fetch();
-        console.log(cursor);
         return cursor.slice(0,4)[0];
     }
 });

@@ -8,7 +8,7 @@ if (Meteor.isClient){
 			var passwordVar = template.find('#login-password').value;
 			Meteor.loginWithPassword(emailVar, passwordVar);
 			if (Meteor.user() !== null) {
-				Router.go('main');
+				Router.go('results');
 			}
 		}
 	});
