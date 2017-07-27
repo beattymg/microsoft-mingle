@@ -36,3 +36,12 @@ h4 {
 .profile-box{
     padding: 10px;
 }
+
+
+form, textarea {
+    width:100%;
+    box-sizing: border-box;         /* For IE and modern versions of Chrome */
+    -moz-box-sizing: border-box;    /* For Firefox                          */
+    -webkit-box-sizing: border-box; /* For Safari                           */
+}
+

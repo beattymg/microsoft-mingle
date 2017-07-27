@@ -1,5 +1,5 @@
 <template name="results">
-     <nav id="navbar" style="background-color: lightgray">
+    <nav id="navbar" style="background-color: lightgray">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{pathFor 'results'}}">Microsoft Mingle</a>
@@ -10,26 +10,37 @@
             </ul>
         </div>
     </nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-5 profile-box" align="center" >
-            {{>resultuser1}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 profile-box" align="center">
+                {{>resultuser1}}
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 profile-box" align="center">
+                {{>resultuser2}}
+            </div>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5 profile-box" align="center">
-            {{>resultuser2}}
+        <div class="row">
+            <div class="col-md-5 profile-box" align="center">
+                {{>resultuser3}}
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5 profile-box" align="center">
+                {{>resultuser4}}
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-5 profile-box" align="center">
-            {{>resultuser3}}
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-5 profile-box" align="center">
-            {{>resultuser4}}
-        </div>
-    </div>
-    </div>
+    {{> message}}
+    <script>
+        function sendMingle(user, mingleName, mingleImage, mingleId) {
+            console.log(mingleName);
+            console.log(user['_id']);
+            $('#target-name').text(mingleName);
+            $('#modal-image').attr('src', mingleImage);
+            $('#myModal').modal('show');
+            
+        }
+    </script>
 </template>
 
 <template name="resultuser1">
@@ -40,11 +51,12 @@
     <h2>{{fullname}}</h2>
     <h3>{{role}}</h3>
     <h4>{{organization}} | <small>{{team}}</small></h4>
-    <p> I'm currently working as a {{roleSelect1}} in {{team}} and I'm interested in talking to someone who works in {{orgSelect1}}, {{orgSelect2}},{{orgSelect3}}.
+    <p> I'm currently working as a {{roleSelect1}} in {{team}} and I'm interested in talking to someone who works in {{orgSelect1}},
+        {{orgSelect2}},{{orgSelect3}}.
     </p>
-    <span><a class="btn btn-secondary" href="#" role="button">Mingle &raquo;</a></span>
+    <div><a class="btn btn-primary" href="#" role="button" onclick="sendMingle(Meteor.user(), '{{fullname}}', '{{headshot}}', '{{_id}}')">Mingle &raquo;</a></div>
     {{/with}}
-</template> 
+</template>
 
 <template name="resultuser2">
     {{#with mingle}}
@@ -57,7 +69,7 @@
     <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
         {{orgSelect3}}
     </p>
-    <span><a class="btn btn-secondary" href="#" role="button">Mingle &raquo;</a></span>
+    <div><a class="btn btn-primary" href="#" role="button" onclick="sendMingle(Meteor.user(), '{{fullname}}', '{{headshot}}', '{{_id}}')">Mingle &raquo;</a></div>
     {{/with}}
 </template>
 
@@ -72,9 +84,9 @@
     <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
         {{orgSelect3}}
     </p>
-    <span><a class="btn btn-secondary" href="#" role="button">Mingle &raquo;</a></span>
+    <div><a class="btn btn-primary" href="#" role="button" onclick="sendMingle(Meteor.user(), '{{fullname}}', '{{headshot}}', '{{_id}}')">Mingle &raquo;</a></div>
     {{/with}}
-</template> 
+</template>
 
 <template name="resultuser4">
     {{#with mingle}}
@@ -87,6 +99,46 @@
     <p> I'm currently working on {{roleSelect1}} and I'm interested in talking to someone who works on {{orgSelect1}}, {{orgSelect2}},
         {{orgSelect3}}
     </p>
-    <span><a class="btn btn-secondary" href="#" role="button">Mingle &raquo;</a></span>
+    <div><a class="btn btn-primary" href="#" role="button" onclick="sendMingle(Meteor.user(), '{{fullname}}', '{{headshot}}', '{{_id}}')">Mingle &raquo;</a></div>
     {{/with}}
-</template> 
+</template>
+
+
+<template name="message">
+    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Send 
+                        <span id="target-name"></span>
+                        a Mingle!
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                            <div class="image-cropper-results">
+                                <img class="my-picture-results" id="modal-image" src="">
+                            </div>
+                            </div>
+                            <div class="col-md-8">
+                                <form id="message-form">
+                                    <textarea name="message-area" form="message-form" rows="10">
+                                        
+                                    </textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send Mingle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
