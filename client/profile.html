@@ -7,12 +7,11 @@
                     <a class="navbar-brand" href="{{pathFor 'main'}}">Microsoft Mingle</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{pathFor 'main'}}">Home</a></li>
+                    <li class="active"><a href="{{pathFor 'results'}}">Results</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="update-profile-btn">>Update Profile</li>
-                    <li>{{> dashboard}}</li>
-
+                    <li class="update-profile-btn" href="updateprofile"><a>Update Profile</a></li>
+                    <li><a href="{{pathFor 'login'}}">Log out</a></li>
                 </ul>
             </div>
         </nav>

@@ -18,7 +18,6 @@ Template.insertUser.events({
             userId: Meteor.userId()
         };
 
-
         console.log($(e.target).find('[name=fullname]').val(),
                     $(e.target).find('[name=headshot]').val(),
                     $(e.target).find('[name=organization]').val(),
